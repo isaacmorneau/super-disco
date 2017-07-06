@@ -2,8 +2,13 @@
 
 #include <stdio.h>
 #ifdef __linux
-#include <unistd.h>
+#include <sys/types.h>
 #include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+
 int fillout_shared_memory(shared_memory* buffer) {
     buffer->map = shm_open(
         buffer->name,
@@ -17,7 +22,7 @@ int fillout_shared_memory(shared_memory* buffer) {
         //failed to truncate
         return 3;
     }
-    buffer->memory = nmap(0, buffer->buff_size,
+    buffer->memory = mmap(0, buffer->buff_size,
         PROT_READ | PROT_WRITE, MAP_SHARED, buffer->map, 0);
 
     if (buffer->memory == MAP_FAILED) {

@@ -3,9 +3,16 @@
 
 #define SHARED_BUFF_SIZE 1024
 
+#ifdef __linux
+typedef int fd_t;
+#elif _WIN32
+typedef void* fd_t;
+#endif
+
+
 typedef struct shared_memory {
     void* memory;
-    void* map;
+    fd_t map;
     int buff_size;
     char* name;
 } shared_memory;
