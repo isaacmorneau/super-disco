@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 #this make was for cpp but this project is c
 CXX := gcc
-CXXFLAGS := -Wall -pedantic -std=c11 -lrt -D_POSIX_C_SOURCE=200809L
+CXXFLAGS := -Wall -pedantic -std=c11 -lrt -D_POSIX_C_SOURCE=200809L -D_DEFAULT_SOURCE
 
 CLIBS := 
 APPNAME := super-disco

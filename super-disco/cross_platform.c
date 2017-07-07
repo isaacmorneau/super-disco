@@ -1,13 +1,12 @@
 #include "cross_platform.h"
-
 #include <stdio.h>
+#include <string.h>
 #ifdef __linux
 #include <sys/types.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <string.h>
 
 int enter_background_mode() {
     if (nice(19) == -1) {
@@ -17,7 +16,7 @@ int enter_background_mode() {
 }
 
 int exit_background_mode() {
-    if (!nice(0) == -1) {
+    if (nice(0) == -1) {
         return 1;
     }
     return 0;

@@ -1,5 +1,4 @@
 #include "queue.h"
-#include <Windows.h>
 #include <string.h>
 
 int wait_while_cts(queue * q, int type, int interval) {
@@ -90,7 +89,7 @@ int read_cts(queue * q, char * text, int len) {
     if (wait_until_cts(q, Q_WRITE, 0))
         return -1;
     while (progress < len) {
-        memcpy(text + progress, q->client, min(len - progress, Q_SIZE));
+        memcpy(text + progress, q->client, MIN(len - progress, Q_SIZE));
         progress += Q_SIZE;
         q->_cts_signal = Q_DONE;
         if (wait_while_cts(q, Q_DONE, 0))
@@ -108,7 +107,7 @@ int read_stc(queue * q, char * text, int len) {
     if (wait_until_stc(q, Q_WRITE, 0))
         return -1;
     while (progress < len) {
-        memcpy(text + progress, q->client, min(len - progress, Q_SIZE));
+        memcpy(text + progress, q->client, MIN(len - progress, Q_SIZE));
         progress += Q_SIZE;
         q->_stc_signal = Q_DONE;
         if (wait_while_stc(q, Q_DONE, 0))

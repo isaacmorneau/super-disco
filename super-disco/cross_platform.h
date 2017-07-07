@@ -1,8 +1,13 @@
 #ifndef CROSS_PLATFORM_H
 #define CROSS_PLATFORM_H
 
+#define MAX(x, y) (((x) > (y)) ? (x) : (y))
+#define MIN(x, y) (((x) < (y)) ? (x) : (y))
+
+/* Threading */
 
 #ifdef __linux
+#include <unistd.h>
 typedef int fd_t;
 #define yeild(x) sleep(x)
 
@@ -12,7 +17,6 @@ typedef void* fd_t;
 
 #endif
 
-/* Threading */
 int enter_background_mode();
 int exit_background_mode();
 
