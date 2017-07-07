@@ -4,9 +4,17 @@
 
 #ifdef __linux
 typedef int fd_t;
+#define yeild(x) sleep(x)
+
 #elif _WIN32
 typedef void* fd_t;
+#define yeild(x) Sleep(x)
+
 #endif
+
+/* Threading */
+int enter_background_mode();
+int exit_background_mode();
 
 /* Shared Memory */
 

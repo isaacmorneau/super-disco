@@ -3,13 +3,19 @@
 #include "cross_platform.h"
 //bigger less cpu
 //smaller less mem footprint
-#define Q_SIZE 128
+#define Q_SIZE 64
 
 
-#define Q_DONE 0
-#define Q_READ 1
-#define Q_WRITE 2
-#define Q_END 3
+#define Q_DONE 1
+#define Q_READ 2
+#define Q_WRITE 4
+
+#define Q_END 8
+
+#define Q_SYNC 16
+#define Q_ACK 32
+
+#define Q_RANGE (1 | 2 | 4 | 8 | 16 | 32)
 
 typedef struct queue {
     //signal set to Q_DONE when handled
@@ -23,8 +29,11 @@ typedef struct queue {
 //0 is kind wait -1 is spinlock >0 is in msec for checks
 //returns when signal != type
 //returns 1 if Q_END hit
-int wait_for_cts(queue * q, int type, int interval);
-int wait_for_stc(queue * q, int type, int interval);
+int wait_while_cts(queue * q, int type, int interval);
+int wait_while_stc(queue * q, int type, int interval);
+//returns when signal == type
+int wait_until_cts(queue * q, int type, int interval);
+int wait_until_stc(queue * q, int type, int interval);
 
 //keep writing until length met
 //returns amout wrote if Q_END hit

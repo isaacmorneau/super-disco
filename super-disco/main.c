@@ -20,6 +20,10 @@ int main(int argc, char** argv) {
     queue * q;
     init_queue(&q, &mem, 0);
 
+    if (enter_background_mode()) {
+        return 1;
+    }
+
     if (argc > 1) {
         char buff[256];
         memset(buff, 0, 256);
@@ -28,7 +32,7 @@ int main(int argc, char** argv) {
     }
     else
     {
-        char buff[] = "This is a Message!";
+        char buff[] = "This is a really long message to make sure that the packetizing doesnt actually loose any of the text 123456789";
         write_stc(q, buff, strlen(buff));
     }
     getchar();

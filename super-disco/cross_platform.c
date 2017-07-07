@@ -9,6 +9,20 @@
 #include <fcntl.h>
 #include <string.h>
 
+int enter_background_mode() {
+    if (nice(19) == -1) {
+        return 1;
+    }
+    return 0;
+}
+
+int exit_background_mode() {
+    if (!nice(0) == -1) {
+        return 1;
+    }
+    return 0;
+}
+
 int fillout_shared_memory(shared_memory* buffer) {
     buffer->map = shm_open(
         buffer->name,
@@ -54,6 +68,20 @@ void read_shared_memory(shared_memory* buffer, void* dest, int len) {
 #include <windows.h>
 #include <conio.h>
 
+
+int enter_background_mode() {
+    if (!SetThreadPriority(GetCurrentThread(), THREAD_MODE_BACKGROUND_BEGIN)) {
+        return 1;
+    }
+    return 0;
+}
+
+int exit_background_mode() {
+    if (!SetThreadPriority(GetCurrentThread(), THREAD_MODE_BACKGROUND_END)) {
+        return 1;
+    }
+    return 0;
+}
 
 int fillout_shared_memory(shared_memory* buffer) {
     buffer->map = CreateFileMapping(
