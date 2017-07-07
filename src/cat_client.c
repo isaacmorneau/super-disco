@@ -3,7 +3,7 @@
 #include "queue.h"
 #include <string.h>
 
-int main(int argc, char** argv) {
+int main() {
     shared_memory mem;
     char* shared_name = "shmem";
     memset(&mem, 0, sizeof(shared_memory));
@@ -24,17 +24,9 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    if (argc > 1) {
-        char buff[256];
-        memset(buff, 0, 256);
-        read_stc(q, buff, 256);
-        printf("read: '%s'", buff);
-    }
-    else
-    {
-        char buff[] = "This is a really long message to make sure that the packetizing doesnt actually loose any of the text 123456789";
-        write_stc(q, buff, strlen(buff));
-    }
-    getchar();
+    char buff[1024];
+    memset(buff, 0, 1024);
+    read_stc(q, buff, 1024);
+    printf("%s", buff);
     cleanup_shared_memory(&mem);
 }
