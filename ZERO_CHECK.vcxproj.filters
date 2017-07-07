@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\88a3de4eee9ff8c2a9c5c2643a84fc1a\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8685DB17-DB2C-33D2-8CC4-2D484B24AED6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

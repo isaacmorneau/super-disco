@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FED570EA-32E1-39B0-8D0F-637C3EB69565}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>super-disco</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>LLVM-vs2014</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">super-disco.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">super-disco</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">super-disco.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">super-disco</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">super-disco.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">super-disco</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">super-disco.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">super-disco</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fms-extensions -fms-compatibility -gline-tables-only -fno-inline -O0</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(filename).obj</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/isaac/Documents/GitHub/super-disco/Debug/super-disco.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/isaac/Documents/GitHub/super-disco/Debug/super-disco.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fms-extensions -fms-compatibility</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(filename).obj</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/isaac/Documents/GitHub/super-disco/Release/super-disco.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/isaac/Documents/GitHub/super-disco/Release/super-disco.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fms-extensions -fms-compatibility</AdditionalOptions>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(filename).obj</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/isaac/Documents/GitHub/super-disco/MinSizeRel/super-disco.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/isaac/Documents/GitHub/super-disco/MinSizeRel/super-disco.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fms-extensions -fms-compatibility -gline-tables-only -fno-inline</AdditionalOptions>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)%(filename).obj</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\isaac\Documents\GitHub\super-disco\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/isaac/Documents/GitHub/super-disco/RelWithDebInfo/super-disco.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/isaac/Documents/GitHub/super-disco/RelWithDebInfo/super-disco.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/isaac/Documents/GitHub/super-disco -BC:/Users/isaac/Documents/GitHub/super-disco --check-stamp-file C:/Users/isaac/Documents/GitHub/super-disco/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCCompiler.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/isaac/Documents/GitHub/super-disco -BC:/Users/isaac/Documents/GitHub/super-disco --check-stamp-file C:/Users/isaac/Documents/GitHub/super-disco/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCCompiler.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/isaac/Documents/GitHub/super-disco -BC:/Users/isaac/Documents/GitHub/super-disco --check-stamp-file C:/Users/isaac/Documents/GitHub/super-disco/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCCompiler.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/isaac/Documents/GitHub/super-disco -BC:/Users/isaac/Documents/GitHub/super-disco --check-stamp-file C:/Users/isaac/Documents/GitHub/super-disco/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/isaac/Documents/GitHub/super-disco/CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCCompiler.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\3.9.0-rc5\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-Clang.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\isaac\Documents\GitHub\super-disco\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\isaac\Documents\GitHub\super-disco\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\isaac\Documents\GitHub\super-disco\src\cross_platform.c"  />
+    <ClCompile Include="C:\Users\isaac\Documents\GitHub\super-disco\src\main.c"  />
+    <ClCompile Include="C:\Users\isaac\Documents\GitHub\super-disco\src\queue.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\isaac\Documents\GitHub\super-disco\ZERO_CHECK.vcxproj">
+      <Project>{CAB7D3B3-E260-3566-9753-EBB2E1B98C1C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
