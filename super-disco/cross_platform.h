@@ -12,6 +12,7 @@ typedef int fd_t;
 #define yeild(x) sleep(x)
 
 #elif _WIN32
+#include <Windows.h>
 typedef void* fd_t;
 #define yeild(x) Sleep(x)
 
