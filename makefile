@@ -6,7 +6,7 @@ CXXFLAGS := -Wall -pedantic -std=c11 -lrt -D_POSIX_C_SOURCE=200809L -D_DEFAULT_S
 CLIBS := 
 APPNAME := super-disco
 ODIR := bin
-SRC := super-disco
+SRC := src
 HEAD := $(SRC)
 OBJS := $(ODIR)/%.o
 SRCOBJS := $(SRC)/%.c
