@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "cross_platform.h"
+#include "queue.h"
 #include <string.h>
 
 int main(int argc, char** argv) {
@@ -16,16 +17,19 @@ int main(int argc, char** argv) {
         return err;
     }
 
+    queue * q;
+    init_queue(&q, &mem, 0);
+
     if (argc > 1) {
         char buff[256];
         memset(buff, 0, 256);
-        read_shared_memory(&mem, buff, 256);
+        read_stc(q, buff, 256);
         printf("read: '%s'", buff);
     }
     else
     {
         char buff[] = "This is a Message!";
-        write_shared_memory(&mem, buff, strlen(buff));
+        write_stc(q, buff, strlen(buff));
     }
     getchar();
     cleanup_shared_memory(&mem);

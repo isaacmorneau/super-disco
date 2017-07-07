@@ -21,9 +21,15 @@
     <ClCompile Include="cross_platform.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cross_platform.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="queue.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

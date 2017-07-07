@@ -1,7 +1,6 @@
 #ifndef CROSS_PLATFORM_H
 #define CROSS_PLATFORM_H
 
-#define SHARED_BUFF_SIZE 1024
 
 #ifdef __linux
 typedef int fd_t;
@@ -9,6 +8,9 @@ typedef int fd_t;
 typedef void* fd_t;
 #endif
 
+/* Shared Memory */
+
+#define SHARED_BUFF_SIZE 1024
 
 typedef struct shared_memory {
     void* memory;
