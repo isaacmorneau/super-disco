@@ -27,6 +27,7 @@ int exit_background_mode();
 
 typedef struct shared_memory {
     void* memory;
+    int* running;
     fd_t map;
     int buff_size;
     char* name;
@@ -37,9 +38,11 @@ int fillout_shared_memory(shared_memory* buffer);
 //cleans and zeros pointers in shared memory region
 void cleanup_shared_memory(shared_memory* buffer);
 //write to shared mem
-void write_shared_memory(shared_memory* buffer, void* src, int len);
+void write_shared_memory(shared_memory* buffer,int dest, void* src, int len);
 //read from shared mem
-void read_shared_memory(shared_memory* buffer, void* dest, int len);
+void read_shared_memory(shared_memory* buffer,int src, void* dest, int len);
+
+
 
 #endif // !CROSS_PLATFORM_H
 

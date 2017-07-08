@@ -15,6 +15,7 @@ include_directories(src)
 set(SHARED 
     src/cross_platform.c
     src/queue.c
+    src/buffer.c
     )
 
 set(SERVER

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "cross_platform.h"
-#include "queue.h"
+#include "buffer.h"
 #include <string.h>
 
 int main() {
@@ -17,8 +17,8 @@ int main() {
         return err;
     }
 
-    queue * q;
-    init_queue(&q, &mem, 0);
+    buffer * b;
+    init_buffer(&b, &mem, 0);
 
     if (enter_background_mode()) {
         return 1;
@@ -26,7 +26,13 @@ int main() {
 
     char buff[1024];
     memset(buff, 0, 1024);
-    read_stc(q, buff, 1024);
-    printf("%s", buff);
+    while (1) {
+        if(read_buffer(b, buff, 1024) > 0)
+            printf("%s", buff);
+        else
+            break;
+        if(!*mem.running)
+            break;
+    }
     cleanup_shared_memory(&mem);
 }

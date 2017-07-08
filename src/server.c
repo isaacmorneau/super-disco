@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "cross_platform.h"
-#include "queue.h"
+#include "buffer.h"
 #include <string.h>
 
-int main(int argc, char** argv) {
+int main() {
     shared_memory mem;
     char* shared_name = "shmem";
     memset(&mem, 0, sizeof(shared_memory));
@@ -17,15 +17,26 @@ int main(int argc, char** argv) {
         return err;
     }
 
-    queue * q;
-    init_queue(&q, &mem, 0);
+    *(mem.running) = 1;
+
+    buffer * q;
+    init_buffer(&q, &mem, 0);
 
     if (enter_background_mode()) {
         return 1;
     }
 
-    char buff[] = "This is a really long message to make sure that the packetizing doesnt actually loose any of the text 123456789";
-    write_stc(q, buff, strlen(buff));
-    getchar();
+    char buff[1024]; 
+    memset(buff,0,1024);
+    while (1) {
+        if(!fgets(buff,1024,stdin))
+            break;
+        if(!strcmp(buff,"exit\n"))
+            break;
+        write_buffer(q, buff, strlen(buff));
+    }
+    
+    *(mem.running) = 0;
+
     cleanup_shared_memory(&mem);
 }

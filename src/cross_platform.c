@@ -1,6 +1,15 @@
 #include "cross_platform.h"
 #include <stdio.h>
 #include <string.h>
+
+void write_shared_memory(shared_memory* buffer,int dest, void* src, int len) {
+    memcpy(buffer->memory + dest, src, len);
+}
+
+void read_shared_memory(shared_memory* buffer,int src, void* dest, int len) {
+    memcpy(dest, buffer->memory + src, len);
+}
+
 #ifdef __linux
 #include <sys/types.h>
 #include <sys/mman.h>
@@ -45,7 +54,7 @@ int fillout_shared_memory(shared_memory* buffer) {
         buffer->memory = 0;
         return 2;
     }
-
+    buffer->running = (int*)buffer->memory;
     return 0;
 }
 
@@ -57,12 +66,6 @@ void cleanup_shared_memory(shared_memory* buffer) {
 }
 
 
-void write_shared_memory(shared_memory* buffer, void* src, int len) {
-    memcpy(buffer->memory, src, len);
-}
-void read_shared_memory(shared_memory* buffer, void* dest, int len) {
-    memcpy(dest, buffer->memory, len);
-}
 #elif _WIN32
 #include <windows.h>
 #include <conio.h>
@@ -116,13 +119,4 @@ void cleanup_shared_memory(shared_memory* buffer) {
     CloseHandle(buffer->map);
     buffer->map = 0;
 }
-
-void write_shared_memory(shared_memory* buffer, void* src, int len) {
-    memcpy(buffer->memory, src, len);
-}
-
-void read_shared_memory(shared_memory* buffer, void* dest, int len) {
-    memcpy(dest, buffer->memory, len);
-}
-
 #endif

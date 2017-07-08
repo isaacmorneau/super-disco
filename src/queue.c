@@ -2,50 +2,38 @@
 #include <string.h>
 
 int wait_while_cts(queue * q, int type, int interval) {
-    if (interval == -1) {
-        //spinlock
+    if (interval == -1)
         while (q->_cts_signal == type);
-        return (q->_cts_signal == Q_END);
-    }
-    while (q->_cts_signal == type) {
-        yeild(interval);
-    }
+    else
+        while (q->_cts_signal == type)
+            yeild(interval);
     return (q->_cts_signal == Q_END);
 }
 
 int wait_while_stc(queue * q, int type, int interval) {
-    if (interval == -1) {
-        //spinlock
+    if (interval == -1)
         while (q->_stc_signal == type);
-        return (q->_stc_signal == Q_END);
-    }
-    while (q->_stc_signal == type) {
-        yeild(interval);
-    }
+    else
+        while (q->_stc_signal == type)
+            yeild(interval);
     return (q->_stc_signal == Q_END);
 }
 
 int wait_until_cts(queue * q, int type, int interval) {
-    if (interval == -1) {
-        //spinlock
-        while (q->_cts_signal != type);
-        return (q->_cts_signal == Q_END);
-    }
-    while (q->_cts_signal != type) {
-        yeild(interval);
-    }
+    if (interval == -1)
+        while (q->_cts_signal != type && q->_cts_signal != Q_END);
+    else
+        while (q->_cts_signal != type && q->_cts_signal != Q_END)
+            yeild(interval);
     return (q->_cts_signal == Q_END);
 }
 
 int wait_until_stc(queue * q, int type, int interval) {
-    if (interval == -1) {
-        //spinlock
-        while (q->_stc_signal != type);
-        return (q->_stc_signal == Q_END);
-    }
-    while (q->_stc_signal != type) {
-        yeild(interval);
-    }
+    if (interval == -1)
+        while (q->_stc_signal != type && q->_stc_signal != Q_END);
+    else
+        while (q->_stc_signal != type && q->_stc_signal != Q_END)
+            yeild(interval);
     return (q->_stc_signal == Q_END);
 }
 
