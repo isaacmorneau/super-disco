@@ -16,6 +16,26 @@ void read_shared_memory(shared_memory* buffer,int src, void* dest, int len) {
 #include <sys/stat.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <semaphore.h>
+
+nsem_t * get_sem(char * name) {
+    nsem_t * id = sem_open(name, O_CREAT, 0755, 0);
+    if (id == SEM_FAILED)
+        return 0;
+    return id;
+}
+
+void wait_sem(nsem_t * sem) {
+    sem_wait(sem);
+}
+
+void post_sem(nsem_t * sem) {
+    sem_post(sem);
+}
+
+void close_sem(char * sem) {
+    sem_unlink(sem);
+}
 
 int enter_background_mode() {
     if (nice(19) == -1) {

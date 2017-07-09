@@ -4,19 +4,30 @@
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
-/* Threading */
-
 #ifdef __linux
 #include <unistd.h>
+#include <semaphore.h>
 typedef int fd_t;
 #define yeild(x) sleep(x)
-
+typedef sem_t nsem_t;
 #elif _WIN32
 #include <Windows.h>
 typedef void* fd_t;
 #define yeild(x) Sleep(x)
+//?
+//typedef sem_t nsem_t
 
 #endif
+
+/* Named Semaphore */
+
+nsem_t * get_sem(char * name);
+void close_sem(char * sem);
+
+void wait_sem(nsem_t * sem);
+void post_sem(nsem_t * sem);
+
+/* Threading */
 
 int enter_background_mode();
 int exit_background_mode();
@@ -24,6 +35,7 @@ int exit_background_mode();
 /* Shared Memory */
 
 #define SHARED_BUFF_SIZE 1024
+#define SHARED_NAME "shm"
 
 typedef struct shared_memory {
     void* memory;
