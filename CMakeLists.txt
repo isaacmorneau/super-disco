@@ -23,15 +23,22 @@ set(SHARED
 set(SERVER
     src/server.c
     )
+
 set(CAT
     src/cat_client.c
     )
 
+set(HTTP
+    src/http_client.c
+    )
+
 add_executable(server ${SHARED} ${SERVER})
 add_executable(cat_client ${SHARED} ${CAT})
+add_executable(http_client ${SHARED} ${HTTP})
 if (UNIX)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
     find_package(Threads REQUIRED)
     target_link_libraries(server rt Threads::Threads)
     target_link_libraries(cat_client rt Threads::Threads)
+    target_link_libraries(http_client rt Threads::Threads)
 endif (UNIX)
