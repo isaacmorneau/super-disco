@@ -13,7 +13,7 @@
 
 int read_all(int fd, void * buffer, int size) {
     int bytes_read = 0, total_read = 0;
-    while ((bytes_read = read(fd, buffer+total_read, size-total_read)) > 0) {
+    while ((bytes_read = read(fd, buffer + total_read, size - total_read)) > 0) {
         total_read += bytes_read;
     }
     return total_read ? total_read : -1;
@@ -21,7 +21,7 @@ int read_all(int fd, void * buffer, int size) {
 
 int write_all(int fd, void * buffer, int size) {
     int bytes_wrote = 0, total_wrote = 0;
-    while ((bytes_wrote = write(fd, buffer+total_wrote, size-total_wrote)) > 0) {
+    while ((bytes_wrote = write(fd, buffer + total_wrote, size - total_wrote)) > 0) {
         total_wrote += bytes_wrote;
     }
     return total_wrote ? total_wrote : -1;
@@ -40,19 +40,19 @@ int send_get(int fd, char * location, char * server, int port) {
 }
 
 int read_response(int fd) {
-    int allocated = 2046;
+    int allocated = 1024;
     int current_pos = 0;
     void * buffer = malloc(allocated);
     int resp_read = 0;
-    while ((resp_read = read_all(fd, buffer+current_pos, allocated-current_pos))) {
+    while ((resp_read = read_all(fd, buffer + current_pos, allocated - current_pos))) {
         if (resp_read == -1) {
             //something broke /shrug
             free(buffer);
             return -1;
-        } else if (resp_read < allocated) {
+        } else if (resp_read < allocated - current_pos) {
             //we hit the end
             break;
-        } else if (resp_read == allocated) {
+        } else if (resp_read == allocated - current_pos) {
             //we need more room
             allocated *= 2;
             void * temp;
