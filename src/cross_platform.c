@@ -90,6 +90,25 @@ void cleanup_shared_memory(shared_memory* buffer) {
 #include <windows.h>
 #include <conio.h>
 
+nsem_t * get_sem(char * name) {
+    nsem_t * id = CreateSemaphore(0,0,256, name);
+    if (id == 0)
+        return 0;
+    return id;
+}
+
+void wait_sem(nsem_t * sem) {
+    WaitForSingleObject(sem, 0);
+}
+
+void post_sem(nsem_t * sem) {
+    ReleaseSemaphore(sem, 1, 0);
+}
+
+void close_sem(char * sem) {
+    CloseHandle(sem);
+}
+
 
 int enter_background_mode() {
     if (!SetThreadPriority(GetCurrentThread(), THREAD_MODE_BACKGROUND_BEGIN)) {

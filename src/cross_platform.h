@@ -14,6 +14,7 @@ typedef sem_t nsem_t;
 #include <Windows.h>
 typedef void* fd_t;
 #define yeild(x) Sleep(x)
+typedef void* nsem_t;
 //?
 //typedef sem_t nsem_t
 
@@ -38,21 +39,21 @@ int exit_background_mode();
 #define SHARED_NAME "shm"
 
 typedef struct shared_memory {
-    void* memory;
-    int* running;
+    void * memory;
+    int * running;
     fd_t map;
     int buff_size;
-    char* name;
+    char * name;
 } shared_memory;
 
 //expects name and buff_sze to be filled out
-int fillout_shared_memory(shared_memory* buffer);
+int fillout_shared_memory(shared_memory * buffer);
 //cleans and zeros pointers in shared memory region
-void cleanup_shared_memory(shared_memory* buffer);
+void cleanup_shared_memory(shared_memory * buffer);
 //write to shared mem
-void write_shared_memory(shared_memory* buffer,int dest, void* src, int len);
+void write_shared_memory(shared_memory * buffer, int dest, void * src, int len);
 //read from shared mem
-void read_shared_memory(shared_memory* buffer,int src, void* dest, int len);
+void read_shared_memory(shared_memory * buffer, int src, void * dest, int len);
 
 
 
